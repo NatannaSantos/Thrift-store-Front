@@ -16,6 +16,7 @@ export default function Login() {
         if (auth && auth.token) {
             navigate("/");
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function handleChange(e) {

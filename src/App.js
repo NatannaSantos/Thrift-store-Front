@@ -7,6 +7,7 @@ import { HomeProducts } from "./pages/HomeProducts/index.js";
 import Login from "./pages/Login/index.js";
 import Register from "./pages/Register/index.js";
 import { Shoes } from "./pages/Shoes";
+import ProductPage from "./pages/Home/Product/ProductPage";
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
                     <Route path='/eletronics' element={<Eletronics/>} />
                     <Route path='/shoes' element={<Shoes/>} />
                     <Route path='/clothes' element={<Clothes/>} />
+                    <Route path='/product' element={<ProductPage/>} />
                 </Routes>
             </BrowserRouter>
         </AuthProvider>

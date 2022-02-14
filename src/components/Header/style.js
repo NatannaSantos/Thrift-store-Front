@@ -29,6 +29,7 @@ height: 80px;
 border-top-left-radius: 10px;
 display: flex;
 align-items: center;
+cursor: pointer;
 background-color: ${props=>props.selected===false? "#9BB19D": "#FFFFFF"};
 `
 export {

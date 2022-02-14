@@ -19,10 +19,21 @@ function products() {
     const promise = axios.get(`${BASE_URL}/products`);
     return promise;
 }
+function getProduct(id) {
+    const promise = axios.get(`${BASE_URL}/product/${id}`);
+    return promise;
+}
 
-const api={
+function checkout(config){
+    const promise = axios.post(`${BASE_URL}/checkout`, config);
+    return promise;
+}
+
+const api = {
     login,
     register,
-    products
+    products,
+    getProduct,
+    checkout
 }
 export default api;

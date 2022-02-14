@@ -8,6 +8,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 margin-top: 20px;
+cursor: pointer;
 
 h1{
     line-height: 0;
