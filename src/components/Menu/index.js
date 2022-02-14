@@ -21,6 +21,11 @@ export default function Menu({ tab, setTab }) {
         navigate('/login');
         return;
     }
+
+    function handleExit(){
+        document.location.reload(true);
+        return;
+    }
     return (
         <Container tab={tab}>
             <StyledItens onClick={() => handleLogin()}>
@@ -35,7 +40,7 @@ export default function Menu({ tab, setTab }) {
                 <img src={request} alt="cart" />
                 <p>Pedidos</p>
             </StyledItens>
-            <StyledExit>
+            <StyledExit onClick={()=>handleExit()}>
                 {auth ? <img src={exit} alt="cart" /> : ''}
                 {auth ? <p>Sair</p> : ''}
             </StyledExit>
