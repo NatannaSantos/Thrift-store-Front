@@ -7,8 +7,11 @@ import exit from '../../Assets/exit.svg';
 import close from '../../Assets/Close.svg';
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
+import Cart from "../Header/Cart";
+import { useState } from "react";
 
 export default function Menu({ tab, setTab }) {
+    const [selected, setSelected] = useState(false);
     const { auth } = useAuth();
     const navigate = useNavigate();
 
@@ -26,13 +29,19 @@ export default function Menu({ tab, setTab }) {
         document.location.reload(true);
         return;
     }
+    function handleCart() {
+        selected === false ? setSelected(true) : setSelected(!selected);
+        return;
+    }
     return (
+        <>
+        <Cart selected={selected}/>
         <Container tab={tab}>
             <StyledItens onClick={() => handleLogin()}>
                 {auth ? <img src={user} alt="user" /> : <img src={enter} alt="enter" />}
                 {auth ? <p>{auth.name}</p> : <p>Entrar</p>}
             </StyledItens>
-            <StyledItens>
+            <StyledItens onClick={() => handleCart()}>
                 <img src={cart} alt="cart" />
                 <p>Carrinho</p>
             </StyledItens>
@@ -47,5 +56,6 @@ export default function Menu({ tab, setTab }) {
             <Close src={close} alt="close" onClick={() => handleClose()} />
 
         </Container>
+        </>
     );
 }

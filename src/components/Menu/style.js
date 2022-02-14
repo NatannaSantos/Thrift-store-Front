@@ -4,11 +4,12 @@ const Container=styled.div`
 width:244px;
 height: 667px;
 background-color: #FFFFFF;
+color:#000000;
 display: ${props=> props.tab===false? "none" : "flex"};
 justify-content: center;
 flex-direction: column;
-position: absolute;
-z-index:1;
+position: fixed;
+z-index:2;
 top:0;
 left:0;
 padding: 20px;
@@ -18,6 +19,7 @@ font-size:24px;
 font-weight: 600;
 display: flex;
 align-items: center;
+cursor:pointer;
 
 img{
     width: 36px;
@@ -32,6 +34,7 @@ font-size:24px;
 font-weight: 600;
 margin-top: 100px;
 display: flex;
+cursor:pointer;
 
 img{
     margin-right: 10px;

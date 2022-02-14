@@ -1,25 +1,32 @@
 import styled from "styled-components";
 
 const Container=styled.div`
+width:100vw;
 height: 100%;
 display: flex;
 align-items: center;
+justify-content: center;
 flex-direction: column;
 background-color: #E5E5E5;
+
 
 @media (max-width: 500px) {
   width: 100%;
   flex-direction: column; 
+  justify-content: center;
   }
 `
 const Products=styled.div`
 display: flex;
 flex-wrap: wrap;
-margin-left: 60px;
+align-items: center;
+justify-content: center;
 
 @media (max-width: 500px) {
   width: 100%;
   flex-direction: column; 
+  align-items: center;
+  justify-content: center;
   }
 `;
 const Categories=styled.div`

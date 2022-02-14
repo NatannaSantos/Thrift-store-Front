@@ -213,6 +213,6 @@ const ContainerCart = styled.div`
     display: ${props => props.selected ? 'grid' : 'none'};
     position: fixed;
     right: 0;
-    top: 70px;
-    z-index: 2;
+    top: 90px;
+    z-index: 1;
     `
