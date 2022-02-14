@@ -8,7 +8,6 @@ export function AuthProvider({ children }) {
 
   function login(authData) {
     setAuth(authData);
-    console.log(authData);
   }
   
   return (
