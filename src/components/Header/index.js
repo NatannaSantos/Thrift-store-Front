@@ -4,10 +4,13 @@ import { SmallLogo } from "../Logo/SmallLogo";
 import { Container, StyledCart } from "./style";
 import { useState } from "react";
 import Menu from "../Menu";
+import { useNavigate } from "react-router-dom";
+import Cart from "./Cart";
 
 export default function Header() {
     const [tab, setTab] = useState(false);
     const [selected, setSelected] = useState(false);
+    const navigate = useNavigate();
 
     function handleMenu() {
 
@@ -15,22 +18,25 @@ export default function Header() {
         return;
     }
 
-    function handleCart(){
-        {selected===false? setSelected(true): setSelected(!selected)};
+    function handleCart() {
+        selected === false ? setSelected(true) : setSelected(!selected);
         return;
     }
 
     return (
-        <Container>
-            <img src={menu} alt="menu" onClick={() => handleMenu()} />
-            <Menu tab={tab} setTab={setTab} />
-            <SmallLogo>
-                <h1>Thrift</h1>
-                <h2>store</h2>
-            </SmallLogo>
-            <StyledCart selected={selected} onClick={()=>handleCart()}>
-                <img src={cart} alt="carrinho" />
-            </StyledCart>
-        </Container>
+        <>
+            <Cart selected={selected}></Cart>
+            <Container>
+                <img src={menu} alt="menu" onClick={() => handleMenu()} />
+                <Menu tab={tab} setTab={setTab} />
+                <SmallLogo onClick={() => navigate('/')}>
+                    <h1>Thrift</h1>
+                    <h2>store</h2>
+                </SmallLogo>
+                <StyledCart selected={selected} onClick={() => handleCart()}>
+                    <img src={cart} alt="carrinho" />
+                </StyledCart>
+            </Container>
+        </>
     );
 }
