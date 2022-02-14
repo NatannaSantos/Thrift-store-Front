@@ -22,7 +22,16 @@ const Container = styled.header`
   @media (max-width: 700px) {
   width: 100%;
 }
+`;
+const StyledCart=styled.div`
+width: 80px;
+height: 80px;
+border-top-left-radius: 10px;
+display: flex;
+align-items: center;
+background-color: ${props=>props.selected===false? "#9BB19D": "#FFFFFF"};
 `
 export {
     Container,
+    StyledCart
 }

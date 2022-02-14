@@ -17,9 +17,13 @@ const StyledItens=styled.div`
 font-size:24px;
 font-weight: 600;
 display: flex;
+align-items: center;
 
 img{
+    width: 36px;
+    height:36px;
     margin-right: 10px;
+    
 }
 `;
 

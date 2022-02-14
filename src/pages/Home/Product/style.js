@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 const Container=styled.div`
 width:160px;
-height:210px;
+height:215px;
 background-color: #FFFFFF;
 border-radius: 5px;
 margin-bottom: 15px;
 margin-right: 15px;
+overflow: hidden;
 `;
 
 const StyledImage=styled.img`
