@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "https://thriftstore-grp5.herokuapp.com";
+const BASE_URL = "https://thriftst.herokuapp.com";
 
 function createConfig(token) {
     return { headers: { Authorization: `Bearer ${token}` } };
